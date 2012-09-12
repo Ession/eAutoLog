@@ -1,0 +1,7 @@
+## Interface: 50001
+## Version: 5.0.1
+## Title: eAutoLog
+## Notes: Automatically starts the combat log upon entering a raid instance.
+## Author: Ession
+
+eAutoLog.lua
