@@ -5,7 +5,7 @@
 --    Description:  Automatically starts the combat log
 --                  upon entering a raid instance.
 --
---        Version:  5.0.2
+--        Version:  5.2.1
 --
 --         Author:  Mathias Jost (mail@mathiasjost.com)
 --
@@ -15,7 +15,7 @@
 -- -----------------------------------------------------------------------------
 -- Options
 -- -----------------------------------------------------------------------------
-local DontLogLFR = true
+local LogLFR = false
 
 
 -- -----------------------------------------------------------------------------
@@ -42,7 +42,7 @@ eAutoLog:SetScript("OnEvent", function()
 
 	-- check if player is in instance and if the instance is a raid
 	if IsInstance and InstanceType == "raid" then
-		if IsLFR == 7 and DontLogLFR then
+		if IsLFR == 7 and not LogLFR then
 			LoggingCombat(false)
 		else
 			LoggingCombat(true)
